@@ -1,8 +1,230 @@
 /* SASS variables are information about icon's compiled state, stored under its original file name .icon-home width: $icon-home-width The large array-like variables contain all information about a single icon $icon-home: x y offset_x offset_y width height total_width total_height image_path At the bottom of this section, we provide information about the spritesheet itself $spritesheet: width height image $spritesheet-sprites */
 /* The provided mixins are intended to be used with the array-like variables .icon-home @include sprite-width($icon-home) .icon-email @include sprite($icon-email) Example usage in HTML: `display: block` sprite: <div class="icon-home"></div> To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class: */
 /* The `sprites` mixin generates identical output to the CSS template but can be overridden inside of SASS @include sprites($spritesheet-sprites) */
-.header { position: relative; padding: 20px 0; }
+.header { position: relative; }
 
-.index { background-attachment: scroll; }
+.header .h75 { height: 75px; }
+
+.header__top { padding: 35px 0 0; position: absolute; top: 0; left: 0; right: 0; z-index: 15; }
+
+.header__btn_order { width: 100%; }
+
+.header__btn_order:hover { color: #ffffff; }
+
+.header__phone { line-height: 42px; font-size: 20px; letter-spacing: 1.8px; font-family: "FuturaFuturisC"; font-weight: bold; font-style: normal; color: #ffffff; }
+
+.header__phonea { color: #ffffff; }
+
+.header__phone:hover { color: #ffffff; text-decoration: none; }
+
+.header__slider { position: relative; z-index: 5; }
+
+.header__slider .slick-arrow { outline: none; position: absolute; bottom: 135px; display: block; width: 8px; height: 15px; background: none; border: none; z-index: 50; text-indent: -999999px; }
+
+.header__slider .slick-arrow.slick-prev { background: url(../images/prev-arrow.png) no-repeat; left: 17%; }
+
+.header__slider .slick-arrow.slick-next { background: url(../images/next-arrow.png) no-repeat; right: 17%; }
+
+.header__slider img { max-width: 100%; display: block; margin-left: auto; margin-right: auto; }
+
+.header__slider .item { position: relative; }
+
+.header__slider .item .block-text { font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; padding: 30px 0; position: absolute; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.478); font-size: 16px; line-height: 24px; color: #ffffff; }
+
+.header__menu { display: block; position: absolute; right: 15px; bottom: 0; }
+
+.header__menu ul { margin: 0; padding: 0; float: right; display: block; padding-bottom: 10px; border-bottom: #fff solid 1px; }
+
+.header__menu ul li { list-style: none; display: block; float: left; margin: 0; padding: 0 35px; }
+
+.header__menu ul li:nth-child(1) { padding-left: 0; }
+
+.header__menu ul li:nth-last-child(1) { padding-right: 0; }
+
+.header__menu ul li a { font-size: 20px; color: #ffffff; line-height: 30px; position: relative; letter-spacing: 2px; }
+
+.header__menu ul li a:hover { color: #b1292c; text-decoration: none; }
+
+.header__menu ul li.active a { color: #b1292c; }
+
+.header__menu ul li.active a:after { display: block; content: ''; height: 5px; background: #fff; position: absolute; left: 0; right: 0; bottom: -16px; }
+
+.h1-title { position: absolute; text-transform: uppercase; bottom: 48px; left: 0; right: 0; z-index: 15; text-align: center; }
+
+.h1-title h1 { text-transform: uppercase; color: #ffffff; font-family: "FuturaFuturisC"; font-weight: bold; font-style: normal; font-size: 34px; letter-spacing: 10px; }
+
+.footer { background: url(../images/footer-bg.jpg) no-repeat center top; background-size: cover; padding: 68px 0 24px; font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; color: #303030; font-size: 18px; }
+
+.footer a { color: #000; }
+
+.footer__copyright { margin-top: 59px; padding-top: 18px; border-top: #fff solid 1px; letter-spacing: -1px; }
+
+.footer__link { font-size: 20px; line-height: 26px; color: #303030; text-decoration: none; display: block; font-family: "FuturaFuturisC"; font-weight: bold; font-style: normal; }
+
+.footer .btn { margin-top: 8px; }
+
+.footer nav { margin-top: 15px; }
+
+.footer nav ul { display: block; margin: 0; padding: 0; }
+
+.footer nav ul li { margin: 0; padding: 0; float: left; display: block; list-style: none; padding-right: 28px; }
+
+.footer nav ul li:nth-last-child(1) { padding-right: 0; }
+
+.footer nav ul li a { font-size: 18px; color: #2f2f2f; font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; }
+
+body { font-size: 18px; font-family: "FuturaFuturisC"; color: #303030; }
+
+.btn, a.btn { background: #b1292c; color: #ffffff; height: 42px; line-height: 42px; padding-top: 0; padding-bottom: 0; font-size: 18px; }
+
+.btn-black, a.btn-black { background: #595959; color: #ffffff; min-width: 170px; }
+
+.btn-wihte, a.btn-wihte { background: #fff; color: #b1292c; }
+
+.title-block { padding: 52px 0 30px; }
+
+.title-block h2 { font-size: 38px; line-height: 40px; color: #303030; font-weight: bold; }
+
+.title-block a.btn { margin-top: 7px; background: #b1292c; font-weight: normal; font-size: 18px; }
+
+.catalog-list { margin-bottom: 42px; }
+
+.catalog-list__item { margin: 0; padding-bottom: 30px; }
+
+.catalog-list__pic { padding: 1px; height: 180px; background: #ebebeb; margin-bottom: 29px; text-align: center; }
+
+.catalog-list__title { font-family: "FuturaFuturisC"; font-weight: bold; font-style: normal; font-size: 16px; font-weight: bold; color: #303030; padding-bottom: 16px; margin-bottom: 0; letter-spacing: -0.4px; }
+
+.catalog-list__title a { font-family: "FuturaFuturisC"; font-weight: bold; font-style: normal; letter-spacing: -0.4px; font-size: 16px; font-weight: bold; color: #303030; }
+
+.catalog-list__desc { font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; font-size: 16px; }
+
+.info-block { background: #f0f0f0; margin-bottom: 59px; }
+
+.info-block__info { padding: 54px 30px 0 68px; font-size: 18px; line-height: 28px; font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; color: #23201d; }
+
+.info-block__info h2 { margin-bottom: 22px; color: #303030; font-family: "FuturaFuturisC"; font-weight: bold; font-style: normal; font-size: 38px; }
+
+.info-block__info p { padding-left: 2px; margin-bottom: 30px; }
+
+.info-block__slider { margin-left: -15px; position: relative; }
+
+.info-block__slider .slick-dots { position: absolute; margin: 0; padding: 0; left: 0; right: 0; text-align: center; bottom: 39px; height: 12px; }
+
+.info-block__slider .slick-dots li { margin: 0; height: 12px; padding: 0 6px; list-style: none; display: inline-block; }
+
+.info-block__slider .slick-dots li button { width: 12px; height: 12px; display: inline-block; background: none; border: #fff solid 1px; border-radius: 50%; text-indent: -9999px; }
+
+.info-block__slider .slick-dots li.slick-active button { background: #b1292c; border-color: #b1292c; }
+
+.orders-list { margin-bottom: 55px; }
+
+.orders-list h2 { font-family: "FuturaFuturisC"; font-weight: bold; font-style: normal; font-size: 38px; margin-bottom: 56px; }
+
+.orders-list__slid { margin-left: 15px; margin-right: 15px; }
+
+.breadcrumb { padding: 0 0 0 1px; margin: 0; background: none; }
+
+.breadcrumb ul { display: block; padding: 30px 0 14px; margin: 0; }
+
+.breadcrumb ul:after { content: ''; display: table; clear: both; }
+
+.breadcrumb ul li { margin: 0; padding: 0; font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; color: #23201e; float: left; font-size: 18px; list-style: none; letter-spacing: -0.2px; }
+
+.breadcrumb ul li a { font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; font-size: 18px; color: #23201e; }
+
+.breadcrumb ul li a:after { content: '~'; display: inline-block; padding-left: 3px; padding-right: 4px; }
+
+.tabs { margin-bottom: 26px; }
+
+.tabs ul { display: block; margin: 0; padding: 0; }
+
+.tabs ul:after { content: ''; display: table; clear: both; }
+
+.tabs ul li { margin: 0 0 0 0; display: block; padding: 0; float: left; list-style: none; }
+
+.tabs ul li a { display: inline-block; height: 42px; padding: 0 29px; font-size: 18px; line-height: 42px; text-decoration: underline; border-radius: 5px; background: #b1292c; color: #ffffff; }
+
+.tabs ul li a.collapsed { background: none; color: #000; }
+
+.tabs ul li a:hover { background: #b1292c; color: #ffffff; }
+
+.menu-left { padding-bottom: 35px; padding-top: 10px; }
+
+.menu-left ul { display: block; margin: 0; padding: 0; }
+
+.menu-left ul li { margin: 0; position: relative; padding: 0; list-style: none; height: 50px; background: #f4f6f8; border-bottom: #e0e0e0 solid 1px; }
+
+.menu-left ul li:nth-last-child(1) { border-bottom: none; }
+
+.menu-left ul li a { letter-spacing: -1px; display: block; line-height: 49px; color: #000000; padding-left: 25px; }
+
+.menu-left ul li i { color: #a9aeb0; position: absolute; right: 14px; top: 16px; }
+
+.menu-left ul li.active, .menu-left ul li:hover { background: #962922; }
+
+.menu-left ul li.active a, .menu-left ul li:hover a { color: #ffffff; }
+
+.menu-left ul li.active i, .menu-left ul li:hover i { color: #ffffff; }
+
+.orderlive { text-align: center; background: #b1292c; font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; font-size: 16px; line-height: 24px; color: #ffffff; padding: 32px 0 30px 0; margin-bottom: 30px; }
+
+.orderlive h3 { font-size: 18px; letter-spacing: 1.9px; font-family: "FuturaFuturisC"; font-weight: bold; font-style: normal; margin-bottom: 20px; }
+
+.orderlive p { padding: 0 30px; margin-bottom: 19px; }
+
+.orderlive .btn-wihte { width: 100%; max-width: 170px; }
+
+.page-content { font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; color: #23201e; font-size: 14px; line-height: 30px; padding-top: 5px; padding-bottom: 50px; }
+
+.page-content h2 { font-size: 18px; text-transform: uppercase; letter-spacing: 2px; font-family: "FuturaFuturisC"; }
+
+.page-content h3 { font-size: 14px; color: #952a22; }
+
+.page-content ul li { list-style: none; padding-left: 30px; }
+
+.page-content ul li:before { margin-right: 10px; content: "\f00c"; color: #952a22; display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; }
+
+.page-content .grey_text { font-size: 18px; text-transform: uppercase; line-height: 33px; color: #918f8e; letter-spacing: 1.8px; padding-bottom: 25px; }
+
+.contact-block { padding-top: 11px; padding-bottom: 40px; }
+
+.contact-block h3 { font-size: 18px; color: #23201d; margin-bottom: 40px; }
+
+.contact-block__map { margin-bottom: 31px; }
+
+.contact-block__adress i { width: 16px; display: inline-block; }
+
+.contact-block__adress p { margin: 0; padding: 0 0 5px; font-size: 16px; font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; }
+
+.contact-block__email { color: #962a22; }
+
+.contact-block__phone { color: #23201e; }
+
+.forma input { outline: none; }
+
+.forma__text { font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; height: 40px; width: 100%; padding: 0 20px; background: #f4f6f8; color: #23201d; font-size: 14px; border: #f4f6f8 solid 1px; margin-bottom: 29px; }
+
+.forma__text:focus, .forma__text:active { border-color: #000000; background: #ffffff; }
+
+.forma__select { font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; height: 40px; width: 100%; padding: 0 20px; color: #23201d; font-size: 14px; background: #f4f6f8; border: #f4f6f8 solid 1px; margin-bottom: 29px; }
+
+.forma__select:focus, .forma__select:active { border-color: #000000; background: #ffffff; }
+
+.forma__textarea { font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; outline: none; width: 100%; height: 151px; padding: 10px 20px; background: #f4f6f8; color: #23201d; font-size: 14px; border: #f4f6f8 solid 1px; margin-bottom: 25px; }
+
+.forma__textarea:focus, .forma__textarea:active { border-color: #000000; background: #ffffff; }
+
+.forma .error { border-color: #962922; }
+
+.forma__submit { border: none; background: #b1292c; width: 170px; height: 42px; color: #ffffff; border-radius: 5px; cursor: pointer; }
+
+.checkbox { height: 18px; font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; line-height: 18px; font-size: 16px; color: #2a2a2a; display: inline-block; position: relative; }
+
+.checkbox label { font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; padding-left: 32px; height: 18px; font-size: 16px; color: #2a2a2a; line-height: 18px; cursor: pointer; display: inline-block; background: url(../images/checkbox.png) no-repeat; }
+
+.checkbox input { position: absolute; left: 0; top: 0; opacity: 0; }
+
+.checkbox input:checked ~ label { background-position: 0 -18px; }
 
 /*# sourceMappingURL=style.css.map */

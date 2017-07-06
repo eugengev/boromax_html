@@ -73,22 +73,22 @@ fieldset[disabled] a.btn {
 
 // Remove all backgrounds
 .btn-outline-primary {
-  @include button-outline-variant($btn-primary-bg, $btn-primary-color);
+  @include button-outline-variant($btn-primary-bg);
 }
 .btn-outline-secondary {
-  @include button-outline-variant($btn-secondary-border, $btn-secondary-color);
+  @include button-outline-variant($btn-secondary-border);
 }
 .btn-outline-info {
-  @include button-outline-variant($btn-info-bg, $btn-info-color);
+  @include button-outline-variant($btn-info-bg);
 }
 .btn-outline-success {
-  @include button-outline-variant($btn-success-bg, $btn-success-color);
+  @include button-outline-variant($btn-success-bg);
 }
 .btn-outline-warning {
-  @include button-outline-variant($btn-warning-bg, $btn-warning-color);
+  @include button-outline-variant($btn-warning-bg);
 }
 .btn-outline-danger {
-  @include button-outline-variant($btn-danger-bg, $btn-danger-color);
+  @include button-outline-variant($btn-danger-bg);
 }
 
 

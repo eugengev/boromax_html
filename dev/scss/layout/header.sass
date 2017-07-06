@@ -1,3 +1,121 @@
 .header 
+  position: relative
+  .h75
+    height: 75px
+  &__top
+    padding: 35px 0 0
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    z-index: 15
+  &__btn_order
+    width: 100%
+    &:hover
+      color: #ffffff
+  &__phone
+    line-height: 42px
+    font-size: 20px
+    letter-spacing: 1.8px
+    +ffFFCB
+    color: #ffffff
+    &a
+      color: #ffffff
+    &:hover
+      color: #ffffff
+      text-decoration: none
+  &__slider
     position: relative
-    padding: 20px 0
+    z-index: 5
+    .slick-arrow
+      outline: none
+      position: absolute
+      bottom: 135px
+      display: block
+      width: 8px
+      height: 15px
+      background: none
+      border: none
+      z-index: 50
+      text-indent: -999999px
+      &.slick-prev
+        background: url(../images/prev-arrow.png) no-repeat
+        left: 17%
+      &.slick-next
+        background: url(../images/next-arrow.png) no-repeat
+        right: 17%
+    img
+      max-width: 100%
+      display: block
+      margin-left: auto
+      margin-right: auto
+    .item
+      position: relative
+      .block-text
+        +ffFFCL
+        padding: 30px 0
+        position: absolute
+        left: 0
+        right: 0
+        bottom: 0
+        background-color: rgba(0, 0, 0, 0.478)
+        font-size: 16px
+        line-height: 24px
+        color: #ffffff
+  &__menu
+    display: block
+    position: absolute
+    right: 15px
+    bottom: 0
+    ul
+      margin: 0
+      padding: 0
+      float: right
+      display: block
+      padding-bottom: 10px
+      border-bottom: #fff solid 1px
+      li
+        list-style: none
+        display: block
+        float: left
+        margin: 0
+        padding: 0 35px
+        &:nth-child(1)
+          padding-left: 0
+        &:nth-last-child(1)
+          padding-right: 0
+        a
+          font-size: 20px
+          color: #ffffff
+          line-height: 30px
+          position: relative
+          letter-spacing: 2px
+          &:hover
+            color: #b1292c
+            text-decoration: none
+        &.active
+          a
+            color: #b1292c
+            &:after
+              display: block
+              content: ''
+              height: 5px
+              background: #fff
+              position: absolute
+              left: 0
+              right: 0
+              bottom: -16px
+.h1-title
+  position: absolute
+  text-transform: uppercase
+  bottom: 48px
+  left: 0
+  right: 0
+  z-index: 15
+  text-align: center
+  h1
+    text-transform: uppercase
+    color: #ffffff
+    +ffFFCB
+    font-size: 34px
+    letter-spacing: 10px;

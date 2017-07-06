@@ -46,6 +46,33 @@ $(function() {
 
 // placeholder
 //-----------------------------------------------------------------------------
-  $('input[placeholder], textarea[placeholder]').placeholder();
+    $('input[placeholder], textarea[placeholder]').placeholder();
+
+    $('.js-slider-main-init').slick({
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 1,
+      adaptiveHeight: true
+    });
+
+    $('.js-slider-info').slick({
+        dots: true,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
+    });
+
+    $('.js-ordes-slider').slick({
+        dots: false,
+        variableWidth: true,
+        arrows: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 4,
+        adaptiveHeight: true
+    });
 
 });
