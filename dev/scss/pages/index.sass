@@ -69,17 +69,23 @@ body
     line-height: 28px
     +ffFFCL
     color: #23201d
+    @media (max-width: 1024px)
+      padding: 20px 15px 0 20px
     h2
       margin-bottom: 22px
       color: #303030
       +ffFFCB
       font-size: 38px
+      @media (max-width: 1024px)
+        font-size: 20px
     p
       padding-left: 2px
       margin-bottom: 30px
   &__slider
     margin-left: -15px
     position: relative
+    @media (max-width: 800px)
+      margin-left: 0
     .slick-dots
       position: absolute
       margin: 0
@@ -283,6 +289,8 @@ body
     margin-bottom: 40px
   &__map
     margin-bottom: 31px
+    img
+      max-width: 100%
   &__adress
     i
       width: 16px

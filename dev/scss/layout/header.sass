@@ -1,14 +1,32 @@
 .header 
   position: relative
+  @media (max-width: 800px)
+    background: #000000
   .h75
     height: 75px
+    @media (max-width: 800px)
+      height: 50px
+    @media (max-width: 580px)
+      padding-top: 10px
+      padding-bottom: 10px
+  &__logo
+    img
+      max-width: 100%
   &__top
     padding: 35px 0 0
     position: absolute
     top: 0
     left: 0
     right: 0
-    z-index: 15
+    z-index: 25
+    @media (max-width: 1024px)
+      padding-top: 15px
+    @media (max-width: 800px)
+      position: relative
+      top: auto
+      left: auto
+      right: auto
+      padding-bottom: 15px
   &__btn_order
     width: 100%
     &:hover
@@ -38,12 +56,18 @@
       border: none
       z-index: 50
       text-indent: -999999px
+      @media (max-width: 1024px)
+        bottom: 90px
       &.slick-prev
         background: url(../images/prev-arrow.png) no-repeat
         left: 17%
+        @media (max-width: 1024px)
+          left: 2%
       &.slick-next
         background: url(../images/next-arrow.png) no-repeat
         right: 17%
+        @media (max-width: 1024px)
+          right: 2%
     img
       max-width: 100%
       display: block
@@ -62,11 +86,24 @@
         font-size: 16px
         line-height: 24px
         color: #ffffff
+        @media (max-width: 1024px)
+          padding: 10px 0
+          line-height: 18px
   &__menu
     display: block
     position: absolute
     right: 15px
     bottom: 0
+    @media (max-width: 800px)
+      bottom: auto
+      top: 60px
+      right: 15px
+      .navbar-toggler
+        border-color: #fff
+      .navbar-toggler-icon
+        background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>")
+    @media (max-width: 800px)
+      top: 45px
     ul
       margin: 0
       padding: 0
@@ -74,6 +111,12 @@
       display: block
       padding-bottom: 10px
       border-bottom: #fff solid 1px
+      @media (max-width: 800px)
+        background: #000000
+      @media (max-width: 800px)
+        border: none
+        padding-top: 40px
+        width: 100%
       li
         list-style: none
         display: block
@@ -82,8 +125,18 @@
         padding: 0 35px
         &:nth-child(1)
           padding-left: 0
+          @media (max-width: 800px)
+            padding: 0 10px;
         &:nth-last-child(1)
           padding-right: 0
+          @media (max-width: 800px)
+            padding: 0 10px
+        @media (max-width: 1024px)
+          padding: 0 15px
+        @media (max-width: 800px)
+          float: none
+          padding: 0 10px
+          margin-bottom: 20px
         a
           font-size: 20px
           color: #ffffff
@@ -93,6 +146,8 @@
           &:hover
             color: #b1292c
             text-decoration: none
+          @media (max-width: 800px)
+            line-height: 20px
         &.active
           a
             color: #b1292c
@@ -113,9 +168,16 @@
   right: 0
   z-index: 15
   text-align: center
+  @media (max-width: 1445px)
+    bottom: 5%
+  @media (max-width: 1200px)
+    bottom: 5%
   h1
     text-transform: uppercase
     color: #ffffff
     +ffFFCB
     font-size: 34px
-    letter-spacing: 10px;
+    letter-spacing: 10px
+    @media (max-width: 1200px)
+      font-size: 26px
+      letter-spacing: 5px

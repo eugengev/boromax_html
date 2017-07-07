@@ -3,9 +3,21 @@
 /* The `sprites` mixin generates identical output to the CSS template but can be overridden inside of SASS @include sprites($spritesheet-sprites) */
 .header { position: relative; }
 
+@media (max-width: 800px) { .header { background: #000000; } }
+
 .header .h75 { height: 75px; }
 
-.header__top { padding: 35px 0 0; position: absolute; top: 0; left: 0; right: 0; z-index: 15; }
+@media (max-width: 800px) { .header .h75 { height: 50px; } }
+
+@media (max-width: 580px) { .header .h75 { padding-top: 10px; padding-bottom: 10px; } }
+
+.header__logo img { max-width: 100%; }
+
+.header__top { padding: 35px 0 0; position: absolute; top: 0; left: 0; right: 0; z-index: 25; }
+
+@media (max-width: 1024px) { .header__top { padding-top: 15px; } }
+
+@media (max-width: 800px) { .header__top { position: relative; top: auto; left: auto; right: auto; padding-bottom: 15px; } }
 
 .header__btn_order { width: 100%; }
 
@@ -21,9 +33,15 @@
 
 .header__slider .slick-arrow { outline: none; position: absolute; bottom: 135px; display: block; width: 8px; height: 15px; background: none; border: none; z-index: 50; text-indent: -999999px; }
 
+@media (max-width: 1024px) { .header__slider .slick-arrow { bottom: 90px; } }
+
 .header__slider .slick-arrow.slick-prev { background: url(../images/prev-arrow.png) no-repeat; left: 17%; }
 
+@media (max-width: 1024px) { .header__slider .slick-arrow.slick-prev { left: 2%; } }
+
 .header__slider .slick-arrow.slick-next { background: url(../images/next-arrow.png) no-repeat; right: 17%; }
+
+@media (max-width: 1024px) { .header__slider .slick-arrow.slick-next { right: 2%; } }
 
 .header__slider img { max-width: 100%; display: block; margin-left: auto; margin-right: auto; }
 
@@ -31,19 +49,41 @@
 
 .header__slider .item .block-text { font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; padding: 30px 0; position: absolute; left: 0; right: 0; bottom: 0; background-color: rgba(0, 0, 0, 0.478); font-size: 16px; line-height: 24px; color: #ffffff; }
 
+@media (max-width: 1024px) { .header__slider .item .block-text { padding: 10px 0; line-height: 18px; } }
+
 .header__menu { display: block; position: absolute; right: 15px; bottom: 0; }
 
+@media (max-width: 800px) { .header__menu { bottom: auto; top: 60px; right: 15px; }
+  .header__menu .navbar-toggler { border-color: #fff; }
+  .header__menu .navbar-toggler-icon { background-image: url("data:image/svg+xml;charset=utf8,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/></svg>"); } }
+
+@media (max-width: 800px) { .header__menu { top: 45px; } }
+
 .header__menu ul { margin: 0; padding: 0; float: right; display: block; padding-bottom: 10px; border-bottom: #fff solid 1px; }
+
+@media (max-width: 800px) { .header__menu ul { background: #000000; } }
+
+@media (max-width: 800px) { .header__menu ul { border: none; padding-top: 40px; width: 100%; } }
 
 .header__menu ul li { list-style: none; display: block; float: left; margin: 0; padding: 0 35px; }
 
 .header__menu ul li:nth-child(1) { padding-left: 0; }
 
+@media (max-width: 800px) { .header__menu ul li:nth-child(1) { padding: 0 10px; } }
+
 .header__menu ul li:nth-last-child(1) { padding-right: 0; }
+
+@media (max-width: 800px) { .header__menu ul li:nth-last-child(1) { padding: 0 10px; } }
+
+@media (max-width: 1024px) { .header__menu ul li { padding: 0 15px; } }
+
+@media (max-width: 800px) { .header__menu ul li { float: none; padding: 0 10px; margin-bottom: 20px; } }
 
 .header__menu ul li a { font-size: 20px; color: #ffffff; line-height: 30px; position: relative; letter-spacing: 2px; }
 
 .header__menu ul li a:hover { color: #b1292c; text-decoration: none; }
+
+@media (max-width: 800px) { .header__menu ul li a { line-height: 20px; } }
 
 .header__menu ul li.active a { color: #b1292c; }
 
@@ -51,25 +91,43 @@
 
 .h1-title { position: absolute; text-transform: uppercase; bottom: 48px; left: 0; right: 0; z-index: 15; text-align: center; }
 
+@media (max-width: 1445px) { .h1-title { bottom: 5%; } }
+
+@media (max-width: 1200px) { .h1-title { bottom: 5%; } }
+
 .h1-title h1 { text-transform: uppercase; color: #ffffff; font-family: "FuturaFuturisC"; font-weight: bold; font-style: normal; font-size: 34px; letter-spacing: 10px; }
 
+@media (max-width: 1200px) { .h1-title h1 { font-size: 26px; letter-spacing: 5px; } }
+
 .footer { background: url(../images/footer-bg.jpg) no-repeat center top; background-size: cover; padding: 68px 0 24px; font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; color: #303030; font-size: 18px; }
+
+@media (max-width: 1024px) { .footer { font-size: 16px; } }
+
+@media (max-width: 800px) { .footer { padding: 20px 0; } }
 
 .footer a { color: #000; }
 
 .footer__copyright { margin-top: 59px; padding-top: 18px; border-top: #fff solid 1px; letter-spacing: -1px; }
 
+@media (max-width: 1024px) { .footer__copyright { margin-top: 20px; } }
+
 .footer__link { font-size: 20px; line-height: 26px; color: #303030; text-decoration: none; display: block; font-family: "FuturaFuturisC"; font-weight: bold; font-style: normal; }
+
+@media (max-width: 1024px) { .footer__link { font-size: 16px; line-height: 20px; } }
 
 .footer .btn { margin-top: 8px; }
 
 .footer nav { margin-top: 15px; }
+
+@media (max-width: 1024px) { .footer nav { margin-top: 0; text-align: center; } }
 
 .footer nav ul { display: block; margin: 0; padding: 0; }
 
 .footer nav ul li { margin: 0; padding: 0; float: left; display: block; list-style: none; padding-right: 28px; }
 
 .footer nav ul li:nth-last-child(1) { padding-right: 0; }
+
+@media (max-width: 1024px) { .footer nav ul li { padding-right: 0; padding-left: 15px; } }
 
 .footer nav ul li a { font-size: 18px; color: #2f2f2f; font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; }
 
@@ -103,11 +161,17 @@ body { font-size: 18px; font-family: "FuturaFuturisC"; color: #303030; }
 
 .info-block__info { padding: 54px 30px 0 68px; font-size: 18px; line-height: 28px; font-family: 'FuturaFuturisLightC'; font-weight: 300; font-style: normal; color: #23201d; }
 
+@media (max-width: 1024px) { .info-block__info { padding: 20px 15px 0 20px; } }
+
 .info-block__info h2 { margin-bottom: 22px; color: #303030; font-family: "FuturaFuturisC"; font-weight: bold; font-style: normal; font-size: 38px; }
+
+@media (max-width: 1024px) { .info-block__info h2 { font-size: 20px; } }
 
 .info-block__info p { padding-left: 2px; margin-bottom: 30px; }
 
 .info-block__slider { margin-left: -15px; position: relative; }
+
+@media (max-width: 800px) { .info-block__slider { margin-left: 0; } }
 
 .info-block__slider .slick-dots { position: absolute; margin: 0; padding: 0; left: 0; right: 0; text-align: center; bottom: 39px; height: 12px; }
 
@@ -192,6 +256,8 @@ body { font-size: 18px; font-family: "FuturaFuturisC"; color: #303030; }
 .contact-block h3 { font-size: 18px; color: #23201d; margin-bottom: 40px; }
 
 .contact-block__map { margin-bottom: 31px; }
+
+.contact-block__map img { max-width: 100%; }
 
 .contact-block__adress i { width: 16px; display: inline-block; }
 

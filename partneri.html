@@ -10,15 +10,6 @@
   <script src="js/modernizr.js"></script>
   <!--[if lte IE 9]><meta http-equiv="X-UA-Compatible" content="IE=edge"/><![endif]-->
 
-  <!--
-    <link rel="shortcut icon" href="favicon.ico"/>
-    <meta name="keywords" content=""/>
-    <meta name="description" content=""/>
-    <meta name="author" content="">
-    <meta name="robots" content="index,follow">
-    <meta name="copyright" content="">
-  -->
-
 </head>
 
 <body>
@@ -28,23 +19,28 @@
     <div class="header__top">
         <div class="container">
             <div class="row">
-                <div class="col-xl-2">
-                    <a href="#"><img src="./images/logotip.png" alt=""></a>
+                <div class="col-xl-2 col-lg-2 col-md-4 col-5">
+                    <a href="#" class="header__logo"><img src="./images/logotip.png" alt=""></a>
                 </div>
-                <div class="col-xl-3 offset-xl-5 text-xl-right h75">
-                    <a href="+74959175503" class="header__phone">+7 495 917 55 03</a>
+                <div class="col-xl-3 offset-xl-5 col-lg-4 offset-lg-3 col-md-4 col-7 text-md-right h75 ">
+                    <a href="tel:+74959175503" class="header__phone">+7 495 917 55 03</a>
                 </div>
-                <div class="col-xl-2 text-xl-right h75">
+                <div class="col-xl-2 col-lg-3  col-md-4 text-xl-right h75">
                     <a href="#" class="btn header__btn_order">Заказать звонок</a>
                 </div>
-                <nav class="header__menu">
-                    <ul>
-                        <li><a href="/">Главная</a></li>
-                        <li><a href="/catalog.html">Каталог</a></li>
-                        <li><a href="/reshenie.html">Отраслевые решения</a></li>
-                        <li class="active"><a href="/partneri.html">Партнёры</a></li>
-                        <li><a href="/contact.html">Контакты</a></li>
-                    </ul>
+                <nav class="navbar  navbar-toggleable-md header__menu">
+                    <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul>
+                            <li><a href="/">Главная</a></li>
+                            <li><a href="/catalog.html">Каталог</a></li>
+                            <li><a href="/reshenie.html">Отраслевые решения</a></li>
+                            <li class="active"><a href="/partneri.html">Партнёры</a></li>
+                            <li><a href="/contact.html">Контакты</a></li>
+                        </ul>
+                    </div>
                 </nav>
             </div>
         </div>
@@ -91,15 +87,15 @@
     <footer id="footer" class="footer">
     <div class="container">
         <div class="row">
-            <div class="col-xl-3">
+            <div class="col-lg-3 col-md-6 col-6">
                 <a href="tel:84955442084" class="footer__link">8 (495) 544 20 84</a>
                 Звонок по России бесплатный
             </div>
-            <div class="col-xl-2">
+            <div class="col-lg-2 col-md-6 col-6">
                 <a href="mailto:info@boromax.ru" class="footer__link">info@boromax.ru</a>
                 Напишите нам!
             </div>
-            <div class="col-xl-5">
+            <div class="col-xl-5 col-lg-4 col-md-12">
                 <nav>
                     <ul>
                         <li><a href="#">Каталог</a></li>
@@ -109,15 +105,15 @@
                     </ul>
                 </nav>
             </div>
-            <div class="col-xl-2">
+            <div class="col-xl-2 col-lg-3  col-md-12">
                 <a href="#" class="btn header__btn_order">Обратный звонок</a>
             </div>
         </div>
         <div class="row footer__copyright">
-            <div class="col-xl-6">
+            <div class="col-md-6">
                 &copy; 2010-2017 БороМакс
             </div>
-            <div class="col-xl-6 text-right">
+            <div class="col-md-6 text-md-right">
                 <a href="#">Политика конфиденциальности</a>
             </div>
         </div>

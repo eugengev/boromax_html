@@ -49,11 +49,11 @@ $(function() {
     $('input[placeholder], textarea[placeholder]').placeholder();
 
     $('.js-slider-main-init').slick({
-      dots: false,
-      infinite: true,
-      speed: 300,
-      slidesToShow: 1,
-      adaptiveHeight: true
+        dots: false,
+        infinite: true,
+        speed: 300,
+        slidesToShow: 1,
+        adaptiveHeight: true
     });
 
     $('.js-slider-info').slick({
@@ -72,7 +72,37 @@ $(function() {
         infinite: true,
         speed: 300,
         slidesToShow: 4,
-        adaptiveHeight: true
+        adaptiveHeight: true,
+        responsive: [
+            {
+                breakpoint: 1025,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    variableWidth: false
+                }
+            },
+            {
+                breakpoint: 800,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2,
+                    infinite: true,
+                    variableWidth: false
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    infinite: true,
+                    variableWidth: false
+                }
+            }
+        ]
+
     });
 
 });
